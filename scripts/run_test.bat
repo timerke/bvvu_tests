@@ -3,7 +3,7 @@ Rem HOST - IP address of the device under test;
 Rem PORT - port for ssh connection;
 Rem USERNAME - username for connecting to BVVU via ssh;
 Rem PASSWORD - password for connecting to BVVU via ssh;
-Rem NUMBER - number of BVVU reboots.
+Rem REBOOTS - number of BVVU reboots.
 
 set HOST=
 set PORT=

@@ -3,7 +3,7 @@
 # PORT - port for ssh connection;
 # USERNAME - username for connecting to BVVU via ssh;
 # PASSWORD - password for connecting to BVVU via ssh;
-# NUMBER - number of BVVU reboots.
+# REBOOTS - number of BVVU reboots.
 
 HOST=
 PORT=

@@ -1,0 +1,3 @@
+matplotlib
+paramiko
+git+https://github.com/epc-msu/uiobapi#egg=uiobapi

@@ -9,6 +9,6 @@ HOST=
 PORT=
 USERNAME=
 PASSWORD=
-NUMBER=
+REBOOTS=
 cd ..
-./venv/bin/python3 testing_system/testings_system.py --host $HOST --port $PORT --username $USERNAME --password $PASSWORD --number $NUMBER
+./venv/bin/python3 testing_system/testing_system.py --host $HOST --port $PORT --username $USERNAME --password $PASSWORD --reboots $REBOOTS

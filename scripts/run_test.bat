@@ -9,7 +9,7 @@ set HOST=
 set PORT=
 set USERNAME=
 set PASSWORD=
-set NUMBER=
+set REBOOTS=
 cd ..
-venv\scripts\python testing_system\testing_system.py --host %HOST% --port %PORT% --username %USERNAME% --password %PASSWORD% --number %NUMBER%
+venv\scripts\python testing_system\testing_system.py --host %HOST% --port %PORT% --username %USERNAME% --password %PASSWORD% --reboots %REBOOTS%
 pause

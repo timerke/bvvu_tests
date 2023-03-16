@@ -49,7 +49,7 @@
 
 2. Перейдите в папку **scripts** и выполните скрипт:
 
-   - **run_analyser.bat**, если работаете в *Windows*;
+   - **run_analyzer.bat**, если работаете в *Windows*;
 
    - **run_analyzer.sh**, если работаете в *Linux*:
 

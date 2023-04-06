@@ -1,0 +1,4 @@
+matplotlib
+selenium
+webdriver-manager
+git+https://github.com/epc-msu/uiobapi#egg=uiobapi

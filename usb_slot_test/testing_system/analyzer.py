@@ -51,13 +51,16 @@ def draw_data(enabled: List[List[datetime]], disabled: List[List[datetime]]) -> 
 
     _, (ax_1, ax_2) = plt.subplots(2, 1)
     for module_index in range(1, 17):
-        times = enabled[module_index - 1]
-        ax_1.scatter(times, len(times) * [module_index])
-        times = disabled[module_index - 1]
-        ax_2.scatter(times, len(times) * [module_index])
+        e_times = enabled[module_index - 1]
+        d_times = disabled[module_index - 1]
+        dump_percentage = 100 * len(d_times) / (len(e_times) + len(d_times))
+        ax_1.scatter(e_times, len(e_times) * [module_index])
+        ax_2.scatter(d_times, len(d_times) * [module_index],
+                     label=f"Модуль #{module_index} (отваливается {dump_percentage:.2f}%)")
+    start_date = get_start_date(*enabled, *disabled)
     for ax in (ax_1, ax_2):
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%H:%M"))
-        ax.set_xlabel("Время")
+        ax.set_xlabel(f"Время {start_date}")
     ax_1.set_ylabel("Модули в админке")
     ax_2.set_ylabel("Отвалившиеся модули")
     ax.legend()
@@ -66,10 +69,15 @@ def draw_data(enabled: List[List[datetime]], disabled: List[List[datetime]]) -> 
 
 def get_start_date(*args) -> str:
     """
-
-    :param args:
-    :return:
+    :param args: lists with datetimes.
+    :return: smallest date from the lists.
     """
+
+    start_datetime = None
+    for data in args:
+        if start_datetime is None or (data and start_datetime > data[0]):
+            start_datetime = data[0]
+    return start_datetime.strftime("%d.%m.%Y")
 
 
 if __name__ == "__main__":

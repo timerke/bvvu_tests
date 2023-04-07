@@ -45,7 +45,7 @@ class EnerGenie:
         """
 
         pages = {EnerGenie.PASSWORD_NAME: Page.LOGIN,
-                 EnerGenie.SOCKET_ID.format(self._socket_number): Page.CONTROL}
+                 self._socket_number: Page.CONTROL}
         for element_id_or_name, page in pages.items():
             for find_by in ("id", "name"):
                 try:
@@ -82,7 +82,7 @@ class EnerGenie:
         :param turn_on: if True, the power will be turned on.
         """
 
-        socket_element = self._driver.find_element_by_id(EnerGenie.SOCKET_ID)
+        socket_element = self._driver.find_element_by_id(self._socket_number)
         on_off_button = socket_element.find_element_by_class_name(EnerGenie.ON_OFF_BUTTON)
         button_function = on_off_button.text.lower()
         if (button_function == "on" and turn_on) or (button_function == "off" and not turn_on):

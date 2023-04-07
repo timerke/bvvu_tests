@@ -47,8 +47,8 @@ def make_dir(dir_name: str) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser("Script performs a multiple reload of the BVVU and downloads the logs")
     parser.add_argument("--host", type=str, help="IP address of tested BVVU")
-    parser.add_argument("--port", type=int, help="Port for ssh connection")
-    parser.add_argument("--username", type=str, help="Username for connecting to BVVU via ssh")
+    parser.add_argument("--port", type=int, default=39000, help="Port for ssh connection")
+    parser.add_argument("--username", type=str, default="root", help="Username for connecting to BVVU via ssh")
     parser.add_argument("--password", type=str, help="Password for connecting to BVVU via ssh")
     parser.add_argument("--reboots", type=int, default=100, help="Number of BVVU reboots")
     return parser.parse_args()

@@ -8,21 +8,39 @@ from uiob import NewUiob
 
 
 class TestingSystem:
+    """
+    Class for testing blades of USB hubs for slots.
+    """
 
     WAITING_TIME: int = 30
 
-    def __init__(self, bvvu_ip: str, energenie_ip: str, energenie_password: str, log_file_name: str, reboot_number: int
+    def __init__(self, bvvu_ip: str, energenie_ip: str, energenie_password: str, energenie_socket_number: int,
+                 log_file_name: str, reboot_number: int
                  ) -> None:
+        """
+        :param bvvu_ip: IP address of the tested BVVU;
+        :param energenie_ip: IP address of EnerGenie surge protector;
+        :param energenie_password: password to connect to the surge protector through LAN;
+        :param energenie_socket_number: surge protector socket number to be controlled (a number from 1 to 4);
+        :param log_file_name: file name for logging;
+        :param reboot_number: number of required BVVU reboots.
+        """
+
         self._bvvu_ip: str = bvvu_ip
         self._energenie_ip: str = energenie_ip
         self._energenie_password: str = energenie_password
+        self._energenie_socket_number: int = energenie_socket_number
         self._log_file_name: str = log_file_name
         self._reboot_number: int = reboot_number
         self._device: NewUiob = NewUiob(bvvu_ip)
-        self._power_manager: EnerGenie = EnerGenie(energenie_ip, energenie_password)
+        self._power_manager: EnerGenie = EnerGenie(energenie_ip, energenie_password, energenie_socket_number)
         self._init_logger()
 
     def _do_test(self, reboot: bool = True) -> None:
+        """
+        :param reboot: if True, then it is required to turn off and turn on the power of the BVVU.
+        """
+
         self._device.check_slots()
         if reboot:
             self._power_manager.turn_on_or_off_power(False)
@@ -57,9 +75,12 @@ class TestingSystem:
         parser.add_argument("--log_file", type=str, default="log_test.txt", help="File name to save logs")
         parser.add_argument("--password", type=str, default="1", help="Password for connecting to EnerGenie page")
         parser.add_argument("--reboots", type=int, default=200, help="Number of BVVU reboots")
+        parser.add_argument("--socket", type=int, default=1, help="Number of the EnerGenie socket to which the BVVU is"
+                                                                  " connected")
         args = parser.parse_args(sys.argv[1:])
         return TestingSystem(bvvu_ip=args.bvvu_host, energenie_ip=args.energenie_host, energenie_password=args.password,
-                             log_file_name=args.log_file, reboot_number=args.reboots)
+                             energenie_socket_number=args.socket, log_file_name=args.log_file,
+                             reboot_number=args.reboots)
 
     def run_tests(self) -> None:
         self._power_manager.connect()

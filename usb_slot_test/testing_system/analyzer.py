@@ -64,6 +64,14 @@ def draw_data(enabled: List[List[datetime]], disabled: List[List[datetime]]) -> 
     plt.show()
 
 
+def get_start_date(*args) -> str:
+    """
+
+    :param args:
+    :return:
+    """
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("Script to analyze log")
     parser.add_argument("log_file", type=str, help="Name of file with log")

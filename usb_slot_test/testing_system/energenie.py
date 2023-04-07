@@ -13,23 +13,39 @@ class Page(Enum):
 
 
 class EnerGenie:
+    """
+    Class for remote power management of the EnerGenie surge protector.
+    """
 
     ON_OFF_BUTTON: str = "onoffbtn"
     PASSWORD_NAME: str = "pw"
-    SOCKET_ID: str = "stCont0"
+    SOCKET_ID: str = "stCont{}"
 
-    def __init__(self, ip_address: str, password: str) -> None:
+    def __init__(self, ip_address: str, password: str, socket_number: int) -> None:
+        """
+        :param ip_address: IP address of EnerGenie surge protector;
+        :param password: password to connect to the surge protector through LAN;
+        :param socket_number: surge protector socket number to be controlled (a number from 1 to 4).
+        """
+
         self._driver: webdriver.Chrome = None
         self._ip_address: str = ip_address
         self._password: str = password
+        if not isinstance(socket_number, int) or socket_number < 1 or socket_number > 4:
+            raise ValueError("The socket number must be an integer between 1 and 4 inclusive")
+        self._socket_number: str = EnerGenie.SOCKET_ID.format(socket_number - 1)
 
     @property
     def url(self) -> str:
         return f"http://{self._ip_address}"
 
     def _check_page(self) -> Page:
+        """
+        :return: network filter page that opens when connected.
+        """
+
         pages = {EnerGenie.PASSWORD_NAME: Page.LOGIN,
-                 EnerGenie.SOCKET_ID: Page.CONTROL}
+                 EnerGenie.SOCKET_ID.format(self._socket_number): Page.CONTROL}
         for element_id_or_name, page in pages.items():
             for find_by in ("id", "name"):
                 try:
@@ -40,6 +56,7 @@ class EnerGenie:
                     pass
                 else:
                     return page
+        return Page.UNKNOWN
 
     def _enter_password(self) -> None:
         password_element = self._driver.find_element_by_name("pw")

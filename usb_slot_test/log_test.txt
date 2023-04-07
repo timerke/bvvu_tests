@@ -1,0 +1,804 @@
+[2023-04-06 15:25:03 INFO] ====== WebDriver manager ======
+[2023-04-06 15:25:03 INFO] Could not get version for google-chrome. Is google-chrome installed?
+[2023-04-06 15:25:03 INFO] Get LATEST chromedriver version for None google-chrome
+[2023-04-06 15:25:04 INFO] Driver [C:\Users\vladimirov_iy\.wdm\drivers\chromedriver\win32\112.0.5615.49\chromedriver.exe] found in cache
+[2023-04-06 15:25:07 INFO] Power management page loaded
+[2023-04-06 15:25:07 INFO] Test #1
+[2023-04-06 15:25:07 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:25:08 INFO] Power turned off
+[2023-04-06 15:25:09 INFO] Power turned on
+[2023-04-06 15:27:25 INFO] Test #2
+[2023-04-06 15:27:26 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:27:27 INFO] Power turned off
+[2023-04-06 15:27:28 INFO] Power turned on
+[2023-04-06 15:29:39 INFO] Test #3
+[2023-04-06 15:29:39 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:29:40 INFO] Power turned off
+[2023-04-06 15:29:42 INFO] Power turned on
+[2023-04-06 15:31:36 INFO] Test #4
+[2023-04-06 15:31:37 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:31:38 INFO] Power turned off
+[2023-04-06 15:31:39 INFO] Power turned on
+[2023-04-06 15:33:33 INFO] Test #5
+[2023-04-06 15:33:34 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:33:35 INFO] Power turned off
+[2023-04-06 15:33:36 INFO] Power turned on
+[2023-04-06 15:35:54 INFO] Test #6
+[2023-04-06 15:35:54 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:35:55 INFO] Power turned off
+[2023-04-06 15:35:56 INFO] Power turned on
+[2023-04-06 15:37:51 INFO] Test #7
+[2023-04-06 15:37:52 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:37:52 INFO] Power turned off
+[2023-04-06 15:37:54 INFO] Power turned on
+[2023-04-06 15:39:45 INFO] Test #8
+[2023-04-06 15:39:46 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:39:47 INFO] Power turned off
+[2023-04-06 15:39:48 INFO] Power turned on
+[2023-04-06 15:41:43 INFO] Test #9
+[2023-04-06 15:41:44 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:41:45 INFO] Power turned off
+[2023-04-06 15:41:47 INFO] Power turned on
+[2023-04-06 15:43:42 INFO] Test #10
+[2023-04-06 15:43:42 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:43:43 INFO] Power turned off
+[2023-04-06 15:43:45 INFO] Power turned on
+[2023-04-06 15:45:38 INFO] Test #11
+[2023-04-06 15:45:39 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:45:40 INFO] Power turned off
+[2023-04-06 15:45:41 INFO] Power turned on
+[2023-04-06 15:47:36 INFO] Test #12
+[2023-04-06 15:47:37 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:47:37 INFO] Power turned off
+[2023-04-06 15:47:39 INFO] Power turned on
+[2023-04-06 15:49:34 INFO] Test #13
+[2023-04-06 15:49:34 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:49:35 INFO] Power turned off
+[2023-04-06 15:49:37 INFO] Power turned on
+[2023-04-06 15:51:53 INFO] Test #14
+[2023-04-06 15:51:54 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:51:54 INFO] Power turned off
+[2023-04-06 15:51:56 INFO] Power turned on
+[2023-04-06 15:54:12 INFO] Test #15
+[2023-04-06 15:54:12 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:54:13 INFO] Power turned off
+[2023-04-06 15:54:15 INFO] Power turned on
+[2023-04-06 15:56:09 INFO] Test #16
+[2023-04-06 15:56:10 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:56:11 INFO] Power turned off
+[2023-04-06 15:56:12 INFO] Power turned on
+[2023-04-06 15:58:06 INFO] Test #17
+[2023-04-06 15:58:07 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 15:58:07 INFO] Power turned off
+[2023-04-06 15:58:09 INFO] Power turned on
+[2023-04-06 16:00:03 INFO] Test #18
+[2023-04-06 16:00:03 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:00:04 INFO] Power turned off
+[2023-04-06 16:00:06 INFO] Power turned on
+[2023-04-06 16:02:00 INFO] Test #19
+[2023-04-06 16:02:01 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:02:01 INFO] Power turned off
+[2023-04-06 16:02:03 INFO] Power turned on
+[2023-04-06 16:04:20 INFO] Test #20
+[2023-04-06 16:04:20 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:04:21 INFO] Power turned off
+[2023-04-06 16:04:23 INFO] Power turned on
+[2023-04-06 16:06:17 INFO] Test #21
+[2023-04-06 16:06:17 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:06:18 INFO] Power turned off
+[2023-04-06 16:06:19 INFO] Power turned on
+[2023-04-06 16:08:14 INFO] Test #22
+[2023-04-06 16:08:14 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:08:15 INFO] Power turned off
+[2023-04-06 16:08:16 INFO] Power turned on
+[2023-04-06 16:10:10 INFO] Test #23
+[2023-04-06 16:10:11 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:10:11 INFO] Power turned off
+[2023-04-06 16:10:13 INFO] Power turned on
+[2023-04-06 16:14:40 INFO] Test #24
+[2023-04-06 16:14:41 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:14:42 INFO] Power turned off
+[2023-04-06 16:14:43 INFO] Power turned on
+[2023-04-06 16:16:37 INFO] Test #25
+[2023-04-06 16:16:38 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:16:38 INFO] Power turned off
+[2023-04-06 16:16:40 INFO] Power turned on
+[2023-04-06 16:18:34 INFO] Test #26
+[2023-04-06 16:18:35 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:18:36 INFO] Power turned off
+[2023-04-06 16:18:37 INFO] Power turned on
+[2023-04-06 16:20:29 INFO] Test #27
+[2023-04-06 16:20:30 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:20:30 INFO] Power turned off
+[2023-04-06 16:20:32 INFO] Power turned on
+[2023-04-06 16:22:49 INFO] Test #28
+[2023-04-06 16:22:49 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:22:50 INFO] Power turned off
+[2023-04-06 16:22:52 INFO] Power turned on
+[2023-04-06 16:24:46 INFO] Test #29
+[2023-04-06 16:24:47 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:24:47 INFO] Power turned off
+[2023-04-06 16:24:49 INFO] Power turned on
+[2023-04-06 16:26:42 INFO] Test #30
+[2023-04-06 16:26:43 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:26:43 INFO] Power turned off
+[2023-04-06 16:26:45 INFO] Power turned on
+[2023-04-06 16:28:40 INFO] Test #31
+[2023-04-06 16:28:41 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:28:41 INFO] Power turned off
+[2023-04-06 16:28:43 INFO] Power turned on
+[2023-04-06 16:30:36 INFO] Test #32
+[2023-04-06 16:30:37 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:30:37 INFO] Power turned off
+[2023-04-06 16:30:39 INFO] Power turned on
+[2023-04-06 16:32:56 INFO] Test #33
+[2023-04-06 16:32:56 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:32:57 INFO] Power turned off
+[2023-04-06 16:32:59 INFO] Power turned on
+[2023-04-06 16:35:15 INFO] Test #34
+[2023-04-06 16:35:15 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:35:16 INFO] Power turned off
+[2023-04-06 16:35:18 INFO] Power turned on
+[2023-04-06 16:37:23 INFO] Test #35
+[2023-04-06 16:37:23 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:37:24 INFO] Power turned off
+[2023-04-06 16:37:26 INFO] Power turned on
+[2023-04-06 16:39:20 INFO] Test #36
+[2023-04-06 16:39:20 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:39:21 INFO] Power turned off
+[2023-04-06 16:39:23 INFO] Power turned on
+[2023-04-06 16:41:26 INFO] Test #37
+[2023-04-06 16:41:26 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:41:27 INFO] Power turned off
+[2023-04-06 16:41:29 INFO] Power turned on
+[2023-04-06 16:43:23 INFO] Test #38
+[2023-04-06 16:43:24 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:43:25 INFO] Power turned off
+[2023-04-06 16:43:26 INFO] Power turned on
+[2023-04-06 16:45:32 INFO] Test #39
+[2023-04-06 16:45:33 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:45:33 INFO] Power turned off
+[2023-04-06 16:45:35 INFO] Power turned on
+[2023-04-06 16:47:30 INFO] Test #40
+[2023-04-06 16:47:31 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:47:31 INFO] Power turned off
+[2023-04-06 16:47:33 INFO] Power turned on
+[2023-04-06 16:49:26 INFO] Test #41
+[2023-04-06 16:49:27 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:49:28 INFO] Power turned off
+[2023-04-06 16:49:29 INFO] Power turned on
+[2023-04-06 16:51:24 INFO] Test #42
+[2023-04-06 16:51:25 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:51:25 INFO] Power turned off
+[2023-04-06 16:51:27 INFO] Power turned on
+[2023-04-06 16:53:20 INFO] Test #43
+[2023-04-06 16:53:21 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:53:22 INFO] Power turned off
+[2023-04-06 16:53:23 INFO] Power turned on
+[2023-04-06 16:55:39 INFO] Test #44
+[2023-04-06 16:55:40 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:55:41 INFO] Power turned off
+[2023-04-06 16:55:42 INFO] Power turned on
+[2023-04-06 16:57:47 INFO] Test #45
+[2023-04-06 16:57:48 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:57:48 INFO] Power turned off
+[2023-04-06 16:57:50 INFO] Power turned on
+[2023-04-06 16:59:45 INFO] Test #46
+[2023-04-06 16:59:45 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 16:59:46 INFO] Power turned off
+[2023-04-06 16:59:48 INFO] Power turned on
+[2023-04-06 17:04:16 INFO] Test #47
+[2023-04-06 17:04:16 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:04:17 INFO] Power turned off
+[2023-04-06 17:04:19 INFO] Power turned on
+[2023-04-06 17:06:13 INFO] Test #48
+[2023-04-06 17:06:14 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:06:15 INFO] Power turned off
+[2023-04-06 17:06:16 INFO] Power turned on
+[2023-04-06 17:08:10 INFO] Test #49
+[2023-04-06 17:08:11 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:08:11 INFO] Power turned off
+[2023-04-06 17:08:13 INFO] Power turned on
+[2023-04-06 17:10:06 INFO] Test #50
+[2023-04-06 17:10:07 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:10:07 INFO] Power turned off
+[2023-04-06 17:10:09 INFO] Power turned on
+[2023-04-06 17:12:03 INFO] Test #51
+[2023-04-06 17:12:03 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:12:04 INFO] Power turned off
+[2023-04-06 17:12:06 INFO] Power turned on
+[2023-04-06 17:13:59 INFO] Test #52
+[2023-04-06 17:14:00 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:14:01 INFO] Power turned off
+[2023-04-06 17:14:02 INFO] Power turned on
+[2023-04-06 17:15:56 INFO] Test #53
+[2023-04-06 17:15:57 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:15:57 INFO] Power turned off
+[2023-04-06 17:15:59 INFO] Power turned on
+[2023-04-06 17:17:53 INFO] Test #54
+[2023-04-06 17:17:54 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:17:55 INFO] Power turned off
+[2023-04-06 17:17:56 INFO] Power turned on
+[2023-04-06 17:19:50 INFO] Test #55
+[2023-04-06 17:19:50 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:19:51 INFO] Power turned off
+[2023-04-06 17:19:52 INFO] Power turned on
+[2023-04-06 17:22:09 INFO] Test #56
+[2023-04-06 17:22:10 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:22:11 INFO] Power turned off
+[2023-04-06 17:22:12 INFO] Power turned on
+[2023-04-06 17:24:07 INFO] Test #57
+[2023-04-06 17:24:08 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:24:08 INFO] Power turned off
+[2023-04-06 17:24:10 INFO] Power turned on
+[2023-04-06 17:26:03 INFO] Test #58
+[2023-04-06 17:26:04 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:26:05 INFO] Power turned off
+[2023-04-06 17:26:06 INFO] Power turned on
+[2023-04-06 17:28:01 INFO] Test #59
+[2023-04-06 17:28:02 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:28:03 INFO] Power turned off
+[2023-04-06 17:28:04 INFO] Power turned on
+[2023-04-06 17:29:58 INFO] Test #60
+[2023-04-06 17:29:59 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:29:59 INFO] Power turned off
+[2023-04-06 17:30:01 INFO] Power turned on
+[2023-04-06 17:32:04 INFO] Test #61
+[2023-04-06 17:32:05 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:32:05 INFO] Power turned off
+[2023-04-06 17:32:07 INFO] Power turned on
+[2023-04-06 17:34:01 INFO] Test #62
+[2023-04-06 17:34:02 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:34:03 INFO] Power turned off
+[2023-04-06 17:34:04 INFO] Power turned on
+[2023-04-06 17:35:59 INFO] Test #63
+[2023-04-06 17:36:00 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:36:00 INFO] Power turned off
+[2023-04-06 17:36:02 INFO] Power turned on
+[2023-04-06 17:38:18 INFO] Test #64
+[2023-04-06 17:38:18 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:38:19 INFO] Power turned off
+[2023-04-06 17:38:21 INFO] Power turned on
+[2023-04-06 17:40:15 INFO] Test #65
+[2023-04-06 17:40:16 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:40:16 INFO] Power turned off
+[2023-04-06 17:40:18 INFO] Power turned on
+[2023-04-06 17:42:12 INFO] Test #66
+[2023-04-06 17:42:12 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:42:13 INFO] Power turned off
+[2023-04-06 17:42:15 INFO] Power turned on
+[2023-04-06 17:44:31 INFO] Test #67
+[2023-04-06 17:44:32 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:44:33 INFO] Power turned off
+[2023-04-06 17:44:34 INFO] Power turned on
+[2023-04-06 17:46:28 INFO] Test #68
+[2023-04-06 17:46:28 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:46:29 INFO] Power turned off
+[2023-04-06 17:46:30 INFO] Power turned on
+[2023-04-06 17:48:46 INFO] Test #69
+[2023-04-06 17:48:47 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:48:48 INFO] Power turned off
+[2023-04-06 17:48:49 INFO] Power turned on
+[2023-04-06 17:51:04 INFO] Test #70
+[2023-04-06 17:51:05 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:51:06 INFO] Power turned off
+[2023-04-06 17:51:07 INFO] Power turned on
+[2023-04-06 17:53:12 INFO] Test #71
+[2023-04-06 17:53:13 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:53:14 INFO] Power turned off
+[2023-04-06 17:53:15 INFO] Power turned on
+[2023-04-06 17:55:09 INFO] Test #72
+[2023-04-06 17:55:10 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:55:10 INFO] Power turned off
+[2023-04-06 17:55:12 INFO] Power turned on
+[2023-04-06 17:57:06 INFO] Test #73
+[2023-04-06 17:57:07 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:57:07 INFO] Power turned off
+[2023-04-06 17:57:09 INFO] Power turned on
+[2023-04-06 17:59:03 INFO] Test #74
+[2023-04-06 17:59:03 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 17:59:04 INFO] Power turned off
+[2023-04-06 17:59:05 INFO] Power turned on
+[2023-04-06 18:01:01 INFO] Test #75
+[2023-04-06 18:01:01 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:01:02 INFO] Power turned off
+[2023-04-06 18:01:03 INFO] Power turned on
+[2023-04-06 18:02:57 INFO] Test #76
+[2023-04-06 18:02:58 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:02:58 INFO] Power turned off
+[2023-04-06 18:03:00 INFO] Power turned on
+[2023-04-06 18:04:59 INFO] Test #77
+[2023-04-06 18:04:59 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:05:00 INFO] Power turned off
+[2023-04-06 18:05:01 INFO] Power turned on
+[2023-04-06 18:06:56 INFO] Test #78
+[2023-04-06 18:06:56 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:06:57 INFO] Power turned off
+[2023-04-06 18:06:58 INFO] Power turned on
+[2023-04-06 18:08:53 INFO] Test #79
+[2023-04-06 18:08:54 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:08:54 INFO] Power turned off
+[2023-04-06 18:08:56 INFO] Power turned on
+[2023-04-06 18:10:49 INFO] Test #80
+[2023-04-06 18:10:50 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:10:51 INFO] Power turned off
+[2023-04-06 18:10:52 INFO] Power turned on
+[2023-04-06 18:13:09 INFO] Test #81
+[2023-04-06 18:13:10 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:13:10 INFO] Power turned off
+[2023-04-06 18:13:12 INFO] Power turned on
+[2023-04-06 18:15:29 INFO] Test #82
+[2023-04-06 18:15:29 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:15:30 INFO] Power turned off
+[2023-04-06 18:15:32 INFO] Power turned on
+[2023-04-06 18:17:48 INFO] Test #83
+[2023-04-06 18:17:49 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:17:49 INFO] Power turned off
+[2023-04-06 18:17:51 INFO] Power turned on
+[2023-04-06 18:19:46 INFO] Test #84
+[2023-04-06 18:19:46 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:19:47 INFO] Power turned off
+[2023-04-06 18:19:49 INFO] Power turned on
+[2023-04-06 18:21:42 INFO] Test #85
+[2023-04-06 18:21:43 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:21:44 INFO] Power turned off
+[2023-04-06 18:21:45 INFO] Power turned on
+[2023-04-06 18:24:01 INFO] Test #86
+[2023-04-06 18:24:02 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:24:02 INFO] Power turned off
+[2023-04-06 18:24:04 INFO] Power turned on
+[2023-04-06 18:26:21 INFO] Test #87
+[2023-04-06 18:26:21 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:26:22 INFO] Power turned off
+[2023-04-06 18:26:24 INFO] Power turned on
+[2023-04-06 18:28:18 INFO] Test #88
+[2023-04-06 18:28:19 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:28:19 INFO] Power turned off
+[2023-04-06 18:28:21 INFO] Power turned on
+[2023-04-06 18:30:14 INFO] Test #89
+[2023-04-06 18:30:15 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:30:16 INFO] Power turned off
+[2023-04-06 18:30:17 INFO] Power turned on
+[2023-04-06 18:32:11 INFO] Test #90
+[2023-04-06 18:32:12 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:32:12 INFO] Power turned off
+[2023-04-06 18:32:14 INFO] Power turned on
+[2023-04-06 18:34:31 INFO] Test #91
+[2023-04-06 18:34:32 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:34:33 INFO] Power turned off
+[2023-04-06 18:34:34 INFO] Power turned on
+[2023-04-06 18:36:51 INFO] Test #92
+[2023-04-06 18:36:52 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:36:53 INFO] Power turned off
+[2023-04-06 18:36:54 INFO] Power turned on
+[2023-04-06 18:39:11 INFO] Test #93
+[2023-04-06 18:39:11 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:39:12 INFO] Power turned off
+[2023-04-06 18:39:14 INFO] Power turned on
+[2023-04-06 18:41:08 INFO] Test #94
+[2023-04-06 18:41:09 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:41:10 INFO] Power turned off
+[2023-04-06 18:41:11 INFO] Power turned on
+[2023-04-06 18:43:27 INFO] Test #95
+[2023-04-06 18:43:27 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:43:28 INFO] Power turned off
+[2023-04-06 18:43:30 INFO] Power turned on
+[2023-04-06 18:45:33 INFO] Test #96
+[2023-04-06 18:45:34 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:45:34 INFO] Power turned off
+[2023-04-06 18:45:36 INFO] Power turned on
+[2023-04-06 18:47:52 INFO] Test #97
+[2023-04-06 18:47:52 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:47:53 INFO] Power turned off
+[2023-04-06 18:47:55 INFO] Power turned on
+[2023-04-06 18:49:49 INFO] Test #98
+[2023-04-06 18:49:50 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:49:50 INFO] Power turned off
+[2023-04-06 18:49:52 INFO] Power turned on
+[2023-04-06 18:51:43 INFO] Test #99
+[2023-04-06 18:51:44 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:51:45 INFO] Power turned off
+[2023-04-06 18:51:46 INFO] Power turned on
+[2023-04-06 18:53:41 INFO] Test #100
+[2023-04-06 18:53:42 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:53:42 INFO] Power turned off
+[2023-04-06 18:53:44 INFO] Power turned on
+[2023-04-06 18:55:38 INFO] Test #101
+[2023-04-06 18:55:39 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:55:39 INFO] Power turned off
+[2023-04-06 18:55:41 INFO] Power turned on
+[2023-04-06 18:57:35 INFO] Test #102
+[2023-04-06 18:57:35 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:57:36 INFO] Power turned off
+[2023-04-06 18:57:38 INFO] Power turned on
+[2023-04-06 18:59:54 INFO] Test #103
+[2023-04-06 18:59:55 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 18:59:56 INFO] Power turned off
+[2023-04-06 18:59:57 INFO] Power turned on
+[2023-04-06 19:01:51 INFO] Test #104
+[2023-04-06 19:01:52 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:01:53 INFO] Power turned off
+[2023-04-06 19:01:54 INFO] Power turned on
+[2023-04-06 19:03:49 INFO] Test #105
+[2023-04-06 19:03:50 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:03:50 INFO] Power turned off
+[2023-04-06 19:03:52 INFO] Power turned on
+[2023-04-06 19:06:08 INFO] Test #106
+[2023-04-06 19:06:08 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:06:09 INFO] Power turned off
+[2023-04-06 19:06:11 INFO] Power turned on
+[2023-04-06 19:08:27 INFO] Test #107
+[2023-04-06 19:08:28 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:08:29 INFO] Power turned off
+[2023-04-06 19:08:30 INFO] Power turned on
+[2023-04-06 19:10:20 INFO] Test #108
+[2023-04-06 19:10:21 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:10:22 INFO] Power turned off
+[2023-04-06 19:10:23 INFO] Power turned on
+[2023-04-06 19:12:39 INFO] Test #109
+[2023-04-06 19:12:40 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:12:40 INFO] Power turned off
+[2023-04-06 19:12:42 INFO] Power turned on
+[2023-04-06 19:14:57 INFO] Test #110
+[2023-04-06 19:14:58 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:14:58 INFO] Power turned off
+[2023-04-06 19:15:00 INFO] Power turned on
+[2023-04-06 19:16:54 INFO] Test #111
+[2023-04-06 19:16:55 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:16:56 INFO] Power turned off
+[2023-04-06 19:16:57 INFO] Power turned on
+[2023-04-06 19:19:04 INFO] Test #112
+[2023-04-06 19:19:05 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:19:05 INFO] Power turned off
+[2023-04-06 19:19:07 INFO] Power turned on
+[2023-04-06 19:21:01 INFO] Test #113
+[2023-04-06 19:21:02 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:21:02 INFO] Power turned off
+[2023-04-06 19:21:04 INFO] Power turned on
+[2023-04-06 19:22:58 INFO] Test #114
+[2023-04-06 19:22:58 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:22:59 INFO] Power turned off
+[2023-04-06 19:23:00 INFO] Power turned on
+[2023-04-06 19:25:17 INFO] Test #115
+[2023-04-06 19:25:18 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:25:18 INFO] Power turned off
+[2023-04-06 19:25:20 INFO] Power turned on
+[2023-04-06 19:27:37 INFO] Test #116
+[2023-04-06 19:27:37 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:27:38 INFO] Power turned off
+[2023-04-06 19:27:39 INFO] Power turned on
+[2023-04-06 19:29:31 INFO] Test #117
+[2023-04-06 19:29:32 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:29:32 INFO] Power turned off
+[2023-04-06 19:29:34 INFO] Power turned on
+[2023-04-06 19:31:27 INFO] Test #118
+[2023-04-06 19:31:28 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:31:28 INFO] Power turned off
+[2023-04-06 19:31:30 INFO] Power turned on
+[2023-04-06 19:35:55 INFO] Test #119
+[2023-04-06 19:35:55 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:35:56 INFO] Power turned off
+[2023-04-06 19:35:57 INFO] Power turned on
+[2023-04-06 19:37:50 INFO] Test #120
+[2023-04-06 19:37:51 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:37:52 INFO] Power turned off
+[2023-04-06 19:37:53 INFO] Power turned on
+[2023-04-06 19:39:46 INFO] Test #121
+[2023-04-06 19:39:47 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:39:47 INFO] Power turned off
+[2023-04-06 19:39:49 INFO] Power turned on
+[2023-04-06 19:42:06 INFO] Test #122
+[2023-04-06 19:42:06 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:42:07 INFO] Power turned off
+[2023-04-06 19:42:09 INFO] Power turned on
+[2023-04-06 19:44:00 INFO] Test #123
+[2023-04-06 19:44:01 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:44:01 INFO] Power turned off
+[2023-04-06 19:44:03 INFO] Power turned on
+[2023-04-06 19:45:56 INFO] Test #124
+[2023-04-06 19:45:57 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:45:57 INFO] Power turned off
+[2023-04-06 19:45:59 INFO] Power turned on
+[2023-04-06 19:47:53 INFO] Test #125
+[2023-04-06 19:47:54 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:47:54 INFO] Power turned off
+[2023-04-06 19:47:56 INFO] Power turned on
+[2023-04-06 19:50:03 INFO] Test #126
+[2023-04-06 19:50:03 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:50:04 INFO] Power turned off
+[2023-04-06 19:50:06 INFO] Power turned on
+[2023-04-06 19:52:04 INFO] Test #127
+[2023-04-06 19:52:05 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:52:05 INFO] Power turned off
+[2023-04-06 19:52:07 INFO] Power turned on
+[2023-04-06 19:53:59 INFO] Test #128
+[2023-04-06 19:54:00 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:54:01 INFO] Power turned off
+[2023-04-06 19:54:02 INFO] Power turned on
+[2023-04-06 19:55:55 INFO] Test #129
+[2023-04-06 19:55:56 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 19:55:56 INFO] Power turned off
+[2023-04-06 19:55:58 INFO] Power turned on
+[2023-04-06 20:00:48 INFO] Test #130
+[2023-04-06 20:00:49 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:00:49 INFO] Power turned off
+[2023-04-06 20:00:51 INFO] Power turned on
+[2023-04-06 20:02:55 INFO] Test #131
+[2023-04-06 20:02:56 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:02:56 INFO] Power turned off
+[2023-04-06 20:02:58 INFO] Power turned on
+[2023-04-06 20:05:15 INFO] Test #132
+[2023-04-06 20:05:15 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:05:16 INFO] Power turned off
+[2023-04-06 20:05:18 INFO] Power turned on
+[2023-04-06 20:07:10 INFO] Test #133
+[2023-04-06 20:07:11 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:07:12 INFO] Power turned off
+[2023-04-06 20:07:13 INFO] Power turned on
+[2023-04-06 20:09:19 INFO] Test #134
+[2023-04-06 20:09:19 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:09:20 INFO] Power turned off
+[2023-04-06 20:09:21 INFO] Power turned on
+[2023-04-06 20:11:16 INFO] Test #135
+[2023-04-06 20:11:17 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:11:17 INFO] Power turned off
+[2023-04-06 20:11:19 INFO] Power turned on
+[2023-04-06 20:13:13 INFO] Test #136
+[2023-04-06 20:13:14 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:13:15 INFO] Power turned off
+[2023-04-06 20:13:16 INFO] Power turned on
+[2023-04-06 20:15:08 INFO] Test #137
+[2023-04-06 20:15:08 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:15:09 INFO] Power turned off
+[2023-04-06 20:15:10 INFO] Power turned on
+[2023-04-06 20:17:02 INFO] Test #138
+[2023-04-06 20:17:02 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:17:03 INFO] Power turned off
+[2023-04-06 20:17:05 INFO] Power turned on
+[2023-04-06 20:18:58 INFO] Test #139
+[2023-04-06 20:18:59 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:18:59 INFO] Power turned off
+[2023-04-06 20:19:01 INFO] Power turned on
+[2023-04-06 20:21:18 INFO] Test #140
+[2023-04-06 20:21:18 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:21:19 INFO] Power turned off
+[2023-04-06 20:21:20 INFO] Power turned on
+[2023-04-06 20:23:14 INFO] Test #141
+[2023-04-06 20:23:14 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:23:15 INFO] Power turned off
+[2023-04-06 20:23:16 INFO] Power turned on
+[2023-04-06 20:25:33 INFO] Test #142
+[2023-04-06 20:25:34 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:25:34 INFO] Power turned off
+[2023-04-06 20:25:36 INFO] Power turned on
+[2023-04-06 20:30:24 INFO] Test #143
+[2023-04-06 20:30:25 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:30:25 INFO] Power turned off
+[2023-04-06 20:30:27 INFO] Power turned on
+[2023-04-06 20:32:20 INFO] Test #144
+[2023-04-06 20:32:21 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:32:21 INFO] Power turned off
+[2023-04-06 20:32:23 INFO] Power turned on
+[2023-04-06 20:34:16 INFO] Test #145
+[2023-04-06 20:34:17 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:34:17 INFO] Power turned off
+[2023-04-06 20:34:19 INFO] Power turned on
+[2023-04-06 20:36:12 INFO] Test #146
+[2023-04-06 20:36:13 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:36:13 INFO] Power turned off
+[2023-04-06 20:36:15 INFO] Power turned on
+[2023-04-06 20:38:31 INFO] Test #147
+[2023-04-06 20:38:31 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:38:32 INFO] Power turned off
+[2023-04-06 20:38:34 INFO] Power turned on
+[2023-04-06 20:40:28 INFO] Test #148
+[2023-04-06 20:40:28 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:40:29 INFO] Power turned off
+[2023-04-06 20:40:31 INFO] Power turned on
+[2023-04-06 20:42:37 INFO] Test #149
+[2023-04-06 20:42:38 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:42:38 INFO] Power turned off
+[2023-04-06 20:42:40 INFO] Power turned on
+[2023-04-06 20:44:39 INFO] Test #150
+[2023-04-06 20:44:39 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:44:40 INFO] Power turned off
+[2023-04-06 20:44:41 INFO] Power turned on
+[2023-04-06 20:46:58 INFO] Test #151
+[2023-04-06 20:46:59 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:46:59 INFO] Power turned off
+[2023-04-06 20:47:01 INFO] Power turned on
+[2023-04-06 20:48:52 INFO] Test #152
+[2023-04-06 20:48:53 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:48:54 INFO] Power turned off
+[2023-04-06 20:48:55 INFO] Power turned on
+[2023-04-06 20:51:12 INFO] Test #153
+[2023-04-06 20:51:12 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:51:13 INFO] Power turned off
+[2023-04-06 20:51:14 INFO] Power turned on
+[2023-04-06 20:53:18 INFO] Test #154
+[2023-04-06 20:53:19 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:53:19 INFO] Power turned off
+[2023-04-06 20:53:21 INFO] Power turned on
+[2023-04-06 20:55:14 INFO] Test #155
+[2023-04-06 20:55:15 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:55:16 INFO] Power turned off
+[2023-04-06 20:55:17 INFO] Power turned on
+[2023-04-06 20:57:34 INFO] Test #156
+[2023-04-06 20:57:35 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:57:35 INFO] Power turned off
+[2023-04-06 20:57:37 INFO] Power turned on
+[2023-04-06 20:59:31 INFO] Test #157
+[2023-04-06 20:59:31 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 20:59:32 INFO] Power turned off
+[2023-04-06 20:59:34 INFO] Power turned on
+[2023-04-06 21:01:27 INFO] Test #158
+[2023-04-06 21:01:28 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:01:28 INFO] Power turned off
+[2023-04-06 21:01:30 INFO] Power turned on
+[2023-04-06 21:03:36 INFO] Test #159
+[2023-04-06 21:03:37 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:03:37 INFO] Power turned off
+[2023-04-06 21:03:39 INFO] Power turned on
+[2023-04-06 21:05:32 INFO] Test #160
+[2023-04-06 21:05:33 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:05:33 INFO] Power turned off
+[2023-04-06 21:05:35 INFO] Power turned on
+[2023-04-06 21:07:29 INFO] Test #161
+[2023-04-06 21:07:29 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:07:30 INFO] Power turned off
+[2023-04-06 21:07:32 INFO] Power turned on
+[2023-04-06 21:09:23 INFO] Test #162
+[2023-04-06 21:09:24 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:09:24 INFO] Power turned off
+[2023-04-06 21:09:26 INFO] Power turned on
+[2023-04-06 21:11:20 INFO] Test #163
+[2023-04-06 21:11:20 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:11:21 INFO] Power turned off
+[2023-04-06 21:11:22 INFO] Power turned on
+[2023-04-06 21:13:39 INFO] Test #164
+[2023-04-06 21:13:40 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:13:40 INFO] Power turned off
+[2023-04-06 21:13:42 INFO] Power turned on
+[2023-04-06 21:15:34 INFO] Test #165
+[2023-04-06 21:15:35 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:15:35 INFO] Power turned off
+[2023-04-06 21:15:37 INFO] Power turned on
+[2023-04-06 21:17:30 INFO] Test #166
+[2023-04-06 21:17:31 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:17:32 INFO] Power turned off
+[2023-04-06 21:17:33 INFO] Power turned on
+[2023-04-06 21:19:38 INFO] Test #167
+[2023-04-06 21:19:39 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:19:39 INFO] Power turned off
+[2023-04-06 21:19:41 INFO] Power turned on
+[2023-04-06 21:24:31 INFO] Test #168
+[2023-04-06 21:24:32 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:24:32 INFO] Power turned off
+[2023-04-06 21:24:34 INFO] Power turned on
+[2023-04-06 21:26:27 INFO] Test #169
+[2023-04-06 21:26:27 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:26:28 INFO] Power turned off
+[2023-04-06 21:26:30 INFO] Power turned on
+[2023-04-06 21:28:22 INFO] Test #170
+[2023-04-06 21:28:22 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:28:23 INFO] Power turned off
+[2023-04-06 21:28:24 INFO] Power turned on
+[2023-04-06 21:30:35 INFO] Test #171
+[2023-04-06 21:30:36 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:30:36 INFO] Power turned off
+[2023-04-06 21:30:38 INFO] Power turned on
+[2023-04-06 21:32:36 INFO] Test #172
+[2023-04-06 21:32:37 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:32:37 INFO] Power turned off
+[2023-04-06 21:32:39 INFO] Power turned on
+[2023-04-06 21:34:33 INFO] Test #173
+[2023-04-06 21:34:34 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:34:34 INFO] Power turned off
+[2023-04-06 21:34:36 INFO] Power turned on
+[2023-04-06 21:36:29 INFO] Test #174
+[2023-04-06 21:36:30 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:36:31 INFO] Power turned off
+[2023-04-06 21:36:32 INFO] Power turned on
+[2023-04-06 21:38:49 INFO] Test #175
+[2023-04-06 21:38:50 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:38:50 INFO] Power turned off
+[2023-04-06 21:38:52 INFO] Power turned on
+[2023-04-06 21:41:09 INFO] Test #176
+[2023-04-06 21:41:09 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:41:10 INFO] Power turned off
+[2023-04-06 21:41:12 INFO] Power turned on
+[2023-04-06 21:43:04 INFO] Test #177
+[2023-04-06 21:43:04 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:43:05 INFO] Power turned off
+[2023-04-06 21:43:06 INFO] Power turned on
+[2023-04-06 21:44:59 INFO] Test #178
+[2023-04-06 21:45:00 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:45:00 INFO] Power turned off
+[2023-04-06 21:45:02 INFO] Power turned on
+[2023-04-06 21:46:56 INFO] Test #179
+[2023-04-06 21:46:57 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:46:58 INFO] Power turned off
+[2023-04-06 21:46:59 INFO] Power turned on
+[2023-04-06 21:48:51 INFO] Test #180
+[2023-04-06 21:48:51 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:48:52 INFO] Power turned off
+[2023-04-06 21:48:53 INFO] Power turned on
+[2023-04-06 21:50:48 INFO] Test #181
+[2023-04-06 21:50:49 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:50:49 INFO] Power turned off
+[2023-04-06 21:50:51 INFO] Power turned on
+[2023-04-06 21:52:46 INFO] Test #182
+[2023-04-06 21:52:47 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:52:47 INFO] Power turned off
+[2023-04-06 21:52:49 INFO] Power turned on
+[2023-04-06 21:57:15 INFO] Test #183
+[2023-04-06 21:57:16 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:57:17 INFO] Power turned off
+[2023-04-06 21:57:18 INFO] Power turned on
+[2023-04-06 21:59:24 INFO] Test #184
+[2023-04-06 21:59:24 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 21:59:25 INFO] Power turned off
+[2023-04-06 21:59:26 INFO] Power turned on
+[2023-04-06 22:01:21 INFO] Test #185
+[2023-04-06 22:01:21 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:01:22 INFO] Power turned off
+[2023-04-06 22:01:24 INFO] Power turned on
+[2023-04-06 22:03:19 INFO] Test #186
+[2023-04-06 22:03:19 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:03:20 INFO] Power turned off
+[2023-04-06 22:03:21 INFO] Power turned on
+[2023-04-06 22:05:16 INFO] Test #187
+[2023-04-06 22:05:17 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:05:17 INFO] Power turned off
+[2023-04-06 22:05:19 INFO] Power turned on
+[2023-04-06 22:07:13 INFO] Test #188
+[2023-04-06 22:07:14 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:07:15 INFO] Power turned off
+[2023-04-06 22:07:16 INFO] Power turned on
+[2023-04-06 22:09:08 INFO] Test #189
+[2023-04-06 22:09:08 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:09:09 INFO] Power turned off
+[2023-04-06 22:09:11 INFO] Power turned on
+[2023-04-06 22:11:09 INFO] Test #190
+[2023-04-06 22:11:10 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:11:10 INFO] Power turned off
+[2023-04-06 22:11:12 INFO] Power turned on
+[2023-04-06 22:13:27 INFO] Test #191
+[2023-04-06 22:13:28 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:13:28 INFO] Power turned off
+[2023-04-06 22:13:30 INFO] Power turned on
+[2023-04-06 22:15:22 INFO] Test #192
+[2023-04-06 22:15:23 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:15:23 INFO] Power turned off
+[2023-04-06 22:15:25 INFO] Power turned on
+[2023-04-06 22:17:20 INFO] Test #193
+[2023-04-06 22:17:21 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:17:21 INFO] Power turned off
+[2023-04-06 22:17:23 INFO] Power turned on
+[2023-04-06 22:19:16 INFO] Test #194
+[2023-04-06 22:19:17 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:19:18 INFO] Power turned off
+[2023-04-06 22:19:19 INFO] Power turned on
+[2023-04-06 22:21:36 INFO] Test #195
+[2023-04-06 22:21:37 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:21:37 INFO] Power turned off
+[2023-04-06 22:21:39 INFO] Power turned on
+[2023-04-06 22:23:34 INFO] Test #196
+[2023-04-06 22:23:34 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:23:35 INFO] Power turned off
+[2023-04-06 22:23:36 INFO] Power turned on
+[2023-04-06 22:25:30 INFO] Test #197
+[2023-04-06 22:25:32 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:25:32 INFO] Power turned off
+[2023-04-06 22:25:34 INFO] Power turned on
+[2023-04-06 22:27:25 INFO] Test #198
+[2023-04-06 22:27:26 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:27:27 INFO] Power turned off
+[2023-04-06 22:27:28 INFO] Power turned on
+[2023-04-06 22:29:44 INFO] Test #199
+[2023-04-06 22:29:45 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:29:45 INFO] Power turned off
+[2023-04-06 22:29:47 INFO] Power turned on
+[2023-04-06 22:31:41 INFO] Test #200
+[2023-04-06 22:31:42 INFO] Number of disabled modules: 4, disabled modules: [5, 6, 7, 8]
+[2023-04-06 22:31:42 INFO] Page closed

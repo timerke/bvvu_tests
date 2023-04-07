@@ -7,9 +7,9 @@ Rem REBOOTS - number of BVVU reboots.
 
 set BVVU_HOST=
 set ENERGENIE_HOST=
-set LOG_FILE=
-set PASSWORD=
-set REBOOTS=
+set LOG_FILE=log_test.txt
+set PASSWORD=1
+set REBOOTS=200
 cd ..
 venv\scripts\python testing_system\testing_system.py --bvvu_host %BVVU_HOST% --energenie_host %ENERGENIE_HOST% --log_file %LOG_FILE% --password %PASSWORD% --reboots %REBOOTS%
 pause

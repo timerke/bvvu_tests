@@ -33,7 +33,12 @@ def analyze_log(log_file_name: str) -> Optional[Tuple[List[List[datetime]], List
         result = pattern.match(record)
         if result:
             log_time = datetime.strptime(result.group(1), "%Y-%m-%d %H:%M:%S")
-            disabled_modules = list(map(int, result.group(3).split(", ")))
+            disabled_modules = []
+            for module in result.group(3).split(", "):
+                try:
+                    disabled_modules.append(int(module))
+                except Exception as exc:
+                    pass
             for module_index in range(1, 17):
                 if module_index in disabled_modules:
                     disabled_modules_history[module_index - 1].append(log_time)

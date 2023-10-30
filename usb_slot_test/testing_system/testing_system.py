@@ -83,7 +83,12 @@ class TestingSystem:
                              reboot_number=args.reboots)
 
     def run_tests(self) -> None:
-        self._power_manager.connect()
+        try:
+            self._power_manager.connect()
+        except Exception as exc:
+            logging.error("Failed to connect to EnerGenie", exc_info=exc)
+            return
+
         test_index = 1
         while test_index <= self._reboot_number:
             try:
@@ -91,7 +96,7 @@ class TestingSystem:
                 self._do_test(test_index < self._reboot_number)
                 test_index += 1
             except Exception as exc:
-                logging.error("An error occurred while running tests (%s)", exc)
+                logging.error("An error occurred while running tests", exc_info=exc)
                 break
         self._power_manager.close_connection()
 

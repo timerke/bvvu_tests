@@ -89,6 +89,7 @@ class Analyzer:
             ax.set_xlabel(f"Время {start_date}")
             ax.set_xlim([total_min_x, total_max_x])
             ax.label_outer()
+        axs[1].legend(bbox_to_anchor=(0.95, 1), loc="upper left", prop={"size": 8})
         plt.show()
 
     def _get_modules_from_uiob_record(self, result, log_time: datetime) -> None:

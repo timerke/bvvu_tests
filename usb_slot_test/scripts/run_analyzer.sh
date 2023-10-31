@@ -3,4 +3,4 @@
 
 LOG_NAME=log_test.txt
 cd ..
-./venv/bin/python3 testing_system/analyzer.py $LOG_NAME
+./venv/bin/python3 run_analyzer.py $LOG_NAME

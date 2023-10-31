@@ -5,7 +5,7 @@ from paramiko import AutoAddPolicy, SSHClient
 
 class SshClient:
 
-    COMMAND: str = "ls /dev | grep ttyACM"
+    COMMAND: str = "ls /dev/ximc"
     SLOT_NUMBER: int = 16
 
     def __init__(self, host: str, port: int, username: str, password: str) -> None:

@@ -59,7 +59,7 @@ class Analyzer:
 
             dump_percentage = round(100 * len(d_times) / (len(e_times) + len(d_times)), 2)
             if slot:
-                label = f"Слот ttyACM{index} ({dump_percentage}% отвалов)"
+                label = f"Слот #{index} ({dump_percentage}% отвалов)"
             else:
                 index += 1
                 label = f"Модуль #{index} ({dump_percentage}% отвалов)"
@@ -106,17 +106,16 @@ class Analyzer:
 
     def _get_slots_from_ssh_record(self, result, log_time: datetime) -> None:
         missing_slots = []
-        pattern = re.compile(r"^'ttyACM(?P<index>\d+)'$")
         for slot in result.group(4).split(", "):
-            new_result = pattern.match(slot)
-            if new_result and new_result["index"]:
-                missing_slots.append(int(new_result["index"]))
+            if slot:
+                slot = slot.strip("'")
+                missing_slots.append(int(slot))
 
-        for slot_index in range(Analyzer.SLOT_NUMBER):
+        for slot_index in range(1, Analyzer.SLOT_NUMBER + 1):
             if slot_index in missing_slots:
-                self._ssh_missing_slot_history[slot_index].append(log_time)
+                self._ssh_missing_slot_history[slot_index - 1].append(log_time)
             else:
-                self._ssh_slot_history[slot_index].append(log_time)
+                self._ssh_slot_history[slot_index - 1].append(log_time)
 
     def run(self, log_file: str) -> None:
         """

@@ -3,4 +3,4 @@
 
 CONFIG=config.ini
 cd ..
-./venv/bin/python3 testing_system/testing_system.py --config $CONFIG
+./venv/bin/python3 run.py --config $CONFIG

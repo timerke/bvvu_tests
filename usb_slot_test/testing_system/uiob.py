@@ -21,11 +21,12 @@ class NewUiob(Uiob):
         :return: True if there are missing modules.
         """
 
-        disabled_modules = []
+        missing_modules = []
         slot_info = self.slot.get_slots_info()
         for slot_index, info in enumerate(slot_info, start=1):
             if info is None:
-                disabled_modules.append(slot_index)
-        disabled_module_number = len(disabled_modules)
-        logging.info("Number of disabled modules: %d, disabled modules: %s", len(disabled_modules), disabled_modules)
-        return disabled_module_number != 0
+                missing_modules.append(slot_index)
+        missing_module_number = len(missing_modules)
+        logging.info("[UIOB] Number of missing modules: %d, missing modules: %s", missing_module_number,
+                     missing_modules)
+        return missing_module_number != 0

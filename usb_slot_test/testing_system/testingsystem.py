@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from testing_system.configreader import ConfigReader
 from testing_system.energenie import EnerGenie
 from testing_system.logger import add_file_handler
+from testing_system.sshclient import SshClient
 from testing_system.uiob import NewUiob
 
 
@@ -20,20 +21,24 @@ class TestingSystem:
 
     WAITING_TIME: int = 30
 
-    def __init__(self, bvvu_ip: str, energenie_ip: str, energenie_password: str, energenie_socket: int,
-                 reboot_number: int, stop_if_fail: bool) -> None:
+    def __init__(self, bvvu_host: str, ssh_port: int, ssh_username: str, ssh_password: str, energenie_host: str,
+                 energenie_password: str, energenie_socket: int, reboot_number: int, stop_if_fail: bool) -> None:
         """
-        :param bvvu_ip: IP address of the tested BVVU;
-        :param energenie_ip: IP address of EnerGenie surge protector;
+        :param bvvu_host: IP address of the tested BVVU;
+        :param ssh_port: port for connecting to BVVU via ssh;
+        :param ssh_username: user login under which to connect to the BVVU via ssh;
+        :param ssh_password: password for connecting to BVU via ssh;
+        :param energenie_host: IP address of EnerGenie surge protector;
         :param energenie_password: password to connect to the surge protector through LAN;
         :param energenie_socket: surge protector socket number to be controlled (a number from 1 to 4);
         :param reboot_number: number of required BVVU reboots;
-        :param stop_if_fail:
+        :param stop_if_fail: True if testing needs to be stopped when a module fails.
         """
 
+        self._device: NewUiob = NewUiob(bvvu_host)
+        self._power_manager: EnerGenie = EnerGenie(energenie_host, energenie_password, energenie_socket)
         self._reboot_number: int = reboot_number
-        self._device: NewUiob = NewUiob(bvvu_ip)
-        self._power_manager: EnerGenie = EnerGenie(energenie_ip, energenie_password, energenie_socket)
+        self._ssh_client: SshClient = SshClient(bvvu_host, ssh_port, ssh_username, ssh_password)
         self._stop_if_fail: bool = stop_if_fail
 
     def _do_test(self, reboot: bool = True) -> None:
@@ -41,8 +46,9 @@ class TestingSystem:
         :param reboot: if True, then it is required to turn off and turn on the power of the BVVU.
         """
 
-        result = self._device.check_slots()
-        if self._stop_if_fail and result:
+        uiob_result = self._device.check_slots()
+        ssh_result = self._ssh_client.check_slots()
+        if self._stop_if_fail and (uiob_result or ssh_result):
             raise StopTestException()
 
         if reboot:
@@ -95,6 +101,9 @@ def run_tests() -> None:
         return
 
     bvvu_host = str(data["BVVU"]["HOST"])
+    ssh_port = data["BVVU"]["SSH_PORT"]
+    ssh_username = data["BVVU"]["USERNAME"]
+    ssh_password = data["BVVU"]["PASSWORD"]
 
     energenie_host = str(data["ENERGENIE"]["HOST"])
     energenie_password = data["ENERGENIE"]["PASSWORD"]
@@ -105,5 +114,6 @@ def run_tests() -> None:
     stop = data["TEST"]["STOP"]
 
     add_file_handler(log_file)
-    testing_system = TestingSystem(bvvu_host, energenie_host, energenie_password, energenie_socket, reboots, stop)
+    testing_system = TestingSystem(bvvu_host, ssh_port, ssh_username, ssh_password, energenie_host, energenie_password,
+                                   energenie_socket, reboots, stop)
     testing_system.run_tests()

@@ -18,7 +18,10 @@ class MissingOption(Exception):
 
 class ConfigReader:
 
-    STRUCTURE = {"BVVU": {"HOST": {"converter": ipaddress.ip_address}},
+    STRUCTURE = {"BVVU": {"HOST": {"converter": ipaddress.ip_address},
+                          "SSH_PORT": {"converter": int},
+                          "USERNAME": {},
+                          "PASSWORD": {}},
                  "TEST": {"LOG_FILE": {"converter": str,
                                        "default": "log_file.txt"},
                           "REBOOTS": {"converter": int,

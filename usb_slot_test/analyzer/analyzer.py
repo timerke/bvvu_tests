@@ -48,7 +48,7 @@ class Analyzer:
         :param slot:
         """
 
-        _, (ax_1, ax_2) = plt.subplots(2, 1)
+        _, axs = plt.subplots(2, 1)
         total_min_x = None
         total_max_x = None
         for index in range(Analyzer.SLOT_NUMBER):
@@ -63,8 +63,8 @@ class Analyzer:
             else:
                 index += 1
                 label = f"Модуль #{index} ({dump_percentage}% отвалов)"
-            ax_1.scatter(e_times, len(e_times) * [index])
-            ax_2.scatter(d_times, len(d_times) * [index], label=label)
+            axs[0].scatter(e_times, len(e_times) * [index])
+            axs[1].scatter(d_times, len(d_times) * [index], label=label)
 
             times = [*e_times, *d_times]
             local_min_x = min(times)
@@ -74,22 +74,21 @@ class Analyzer:
             if total_max_x is None or total_max_x < local_max_x:
                 total_max_x = local_max_x
 
-        start_date = get_start_date(*enabled, *disabled)
-        for ax in (ax_1, ax_2):
-            ax.xaxis.set_major_formatter(mdates.DateFormatter("%H:%M"))
-            ax.set_xlabel(f"Время {start_date}")
-
         if slot:
             y_label_1 = "Слоты по ssh"
             y_label_2 = "Отвалившиеся слоты"
         else:
             y_label_1 = "Модули в админке"
             y_label_2 = "Отвалившиеся модули"
-        ax_1.set_ylabel(y_label_1)
-        ax_2.set_ylabel(y_label_2)
-        ax_1.set_xlim([total_min_x, total_max_x])
-        ax_2.set_xlim([total_min_x, total_max_x])
-        ax.legend()
+        axs[0].set_ylabel(y_label_1)
+        axs[1].set_ylabel(y_label_2)
+
+        start_date = get_start_date(*enabled, *disabled)
+        for ax in axs:
+            ax.xaxis.set_major_formatter(mdates.DateFormatter("%H:%M"))
+            ax.set_xlabel(f"Время {start_date}")
+            ax.set_xlim([total_min_x, total_max_x])
+            ax.label_outer()
         plt.show()
 
     def _get_modules_from_uiob_record(self, result, log_time: datetime) -> None:

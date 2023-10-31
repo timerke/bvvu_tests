@@ -35,6 +35,7 @@ class EnerGenie:
         self._password: str = password
         if not isinstance(socket_number, int) or socket_number < 1 or socket_number > 4:
             raise ValueError("The socket number must be an integer between 1 and 4 inclusive")
+        self._socket: int = socket_number
         self._socket_number: str = EnerGenie.SOCKET_ID.format(socket_number - 1)
 
     @property
@@ -86,15 +87,13 @@ class EnerGenie:
             self._check_logged_in()
         elif current_page == Page.UNKNOWN:
             raise ConnectionError("Failed to load power management page")
-        logging.info("Power management page loaded")
+        logging.info("EnerGenie power management page loaded %s, socket = %d", self.url, self._socket)
 
     def turn_on_or_off_power(self, turn_on: bool) -> None:
         """
         :param turn_on: if True, the power will be turned on.
         """
 
-        import time
-        time.sleep(60)
         socket_element = self._driver.find_element(By.ID, self._socket_number)
         on_off_button = socket_element.find_element(By.CLASS_NAME, EnerGenie.ON_OFF_BUTTON)
         button_function = on_off_button.text.lower()

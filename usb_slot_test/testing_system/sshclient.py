@@ -31,11 +31,12 @@ class SshClient:
 
         self._ssh.connect(self._host, self._port, self._username, self._password)
         slots = set(self.exec_command(SshClient.COMMAND))
-        required_slots = set([f"ttyACM{i}" for i in range(SshClient.SLOT_NUMBER)])
+        required_slots = set([f"{i:0>8}" for i in range(1, SshClient.SLOT_NUMBER + 1)])
         missing_modules = sorted(required_slots.difference(slots))
         missing_module_number = len(missing_modules)
         logging.info("[SSH] Number of missing modules: %d, missing modules: %s", missing_module_number,
                      missing_modules)
+
         return len(missing_modules) != 0
 
     def exec_command(self, command: str, sudo: bool = False) -> List[str]:
@@ -49,5 +50,10 @@ class SshClient:
         if sudo:
             stdin.write(self._password + "\n")
             stdin.flush()
-        stdout_lines = [line.strip("\n\r") for line in iter(stdout.readline, "")]
+        stdout_lines = []
+        for line in iter(stdout.readline, ""):
+            line = line.strip("\n\r")
+            lines = [i for i in line.split(" ") if i]
+            for line in lines:
+                stdout_lines.extend([i for i in line.split("\t") if i])
         return stdout_lines

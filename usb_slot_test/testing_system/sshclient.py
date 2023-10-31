@@ -42,12 +42,12 @@ class SshClient:
         """
         :param command: command to be executed over ssh;
         :param sudo:
-        :return:
+        :return: lines from the result of the command.
         """
 
-        stdin, stdout, stderr = self._ssh.exec_command(command, get_pty=True)
+        stdin, stdout, _ = self._ssh.exec_command(command, get_pty=True)
         if sudo:
             stdin.write(self._password + "\n")
             stdin.flush()
-        stdout_lines = [line.strip("\n") for line in iter(stdout.readline, "")]
+        stdout_lines = [line.strip("\n\r") for line in iter(stdout.readline, "")]
         return stdout_lines

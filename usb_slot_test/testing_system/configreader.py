@@ -6,6 +6,12 @@ from typing import Any, Dict, List
 class MissingOption(Exception):
 
     def __init__(self, section: str, option: str) -> None:
+        """
+        :param section: section name in the configuration file;
+        :param option: an option that is not present in a given section of the configuration file.
+        """
+
+        super().__init__()
         self.option: str = option
         self.section: str = section
 
@@ -43,6 +49,12 @@ class ConfigReader:
         raise ValueError("\n".join(error_info))
 
     def _parse_section(self, parser: ConfigParser, section: str) -> Dict[str, Any]:
+        """
+        :param parser: config parser;
+        :param section: section from which options need to be parsed.
+        :return: dictionary with option values ​​from a given section.
+        """
+
         data = {}
         for item_name, item_data in ConfigReader.STRUCTURE[section].items():
             try:
@@ -65,6 +77,11 @@ class ConfigReader:
         return data
 
     def read(self, config_path: str) -> Dict[str, Dict[str, Any]]:
+        """
+        :param config_path: path to the configuration file.
+        :return: data from the configuration file.
+        """
+
         parser = ConfigParser()
         parser.read(config_path)
         data = {section: self._parse_section(parser, section) for section in ConfigReader.STRUCTURE}

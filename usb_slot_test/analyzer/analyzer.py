@@ -48,7 +48,7 @@ class Analyzer:
         :param slot:
         """
 
-        _, axs = plt.subplots(2, 1)
+        fig, axs = plt.subplots(2, 1)
         total_min_x = None
         total_max_x = None
         for index in range(Analyzer.SLOT_NUMBER):
@@ -58,13 +58,13 @@ class Analyzer:
                 continue
 
             dump_percentage = round(100 * len(d_times) / (len(e_times) + len(d_times)), 2)
+            index += 1
             if slot:
                 label = f"Слот #{index} ({dump_percentage}% отвалов)"
             else:
-                index += 1
                 label = f"Модуль #{index} ({dump_percentage}% отвалов)"
-            axs[0].scatter(e_times, len(e_times) * [index])
-            axs[1].scatter(d_times, len(d_times) * [index], label=label)
+            axs[0].scatter(e_times, len(e_times) * [index], label=label)
+            axs[1].scatter(d_times, len(d_times) * [index])
 
             times = [*e_times, *d_times]
             local_min_x = min(times)
@@ -88,8 +88,9 @@ class Analyzer:
             ax.xaxis.set_major_formatter(mdates.DateFormatter("%H:%M"))
             ax.set_xlabel(f"Время {start_date}")
             ax.set_xlim([total_min_x, total_max_x])
+            ax.set_ylim([0, Analyzer.SLOT_NUMBER + 1])
             ax.label_outer()
-        axs[1].legend(bbox_to_anchor=(0.95, 1), loc="upper left", prop={"size": 8})
+        axs[0].legend(bbox_to_anchor=(0.1, 1.3), loc="upper left", ncol=4)
         plt.show()
 
     def _get_modules_from_uiob_record(self, result, log_time: datetime) -> None:

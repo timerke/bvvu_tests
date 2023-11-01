@@ -1,11 +1,10 @@
 import logging
-from typing import List
+from typing import List, Set
 from paramiko import AutoAddPolicy, SSHClient
 
 
 class SshClient:
 
-    COMMAND: str = "ls /dev/ximc"
     SLOT_NUMBER: int = 16
 
     def __init__(self, host: str, port: int, username: str, password: str) -> None:
@@ -24,20 +23,46 @@ class SshClient:
         self._ssh.set_missing_host_key_policy(AutoAddPolicy())
         self._username: str = username
 
+    @staticmethod
+    def _check_dev(slots: Set[str]) -> bool:
+        """
+        :param slots: set of slots found on the system in the /dev directory.
+        :return: True if there are missing modules.
+        """
+
+        required_slots = set([f"ttyACM{i}" for i in range(SshClient.SLOT_NUMBER)])
+        missing_modules = sorted(required_slots.difference(slots))
+        missing_module_number = len(missing_modules)
+        logging.info("[SSH_DEV] Number of missing modules: %d, missing modules: %s", missing_module_number,
+                     missing_modules)
+        return len(missing_modules) != 0
+
+    @staticmethod
+    def _check_dev_ximc(slots: Set[str]) -> bool:
+        """
+        :param slots: set of slots found on the system in the /dev/ximc directory.
+        :return: True if there are missing modules.
+        """
+
+        required_slots = set([f"{i:0>8}" for i in range(1, SshClient.SLOT_NUMBER + 1)])
+        missing_modules = sorted(required_slots.difference(slots))
+        missing_module_number = len(missing_modules)
+        logging.info("[SSH_DEV_XIMC] Number of missing modules: %d, missing modules: %s", missing_module_number,
+                     missing_modules)
+        return len(missing_modules) != 0
+
     def check_slots(self) -> bool:
         """
         :return: True if there are missing modules.
         """
 
         self._ssh.connect(self._host, self._port, self._username, self._password)
-        slots = set(self.exec_command(SshClient.COMMAND))
-        required_slots = set([f"{i:0>8}" for i in range(1, SshClient.SLOT_NUMBER + 1)])
-        missing_modules = sorted(required_slots.difference(slots))
-        missing_module_number = len(missing_modules)
-        logging.info("[SSH] Number of missing modules: %d, missing modules: %s", missing_module_number,
-                     missing_modules)
+        slots = set(self.exec_command("ls /dev/ximc"))
+        result_dev_ximc = self._check_dev_ximc(slots)
 
-        return len(missing_modules) != 0
+        slots = set(self.exec_command("ls /dev | grep ttyACM"))
+        result_dev = self._check_dev(slots)
+        return result_dev or result_dev_ximc
 
     def exec_command(self, command: str, sudo: bool = False) -> List[str]:
         """

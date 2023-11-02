@@ -40,6 +40,10 @@ class EnerGenie:
 
     @property
     def url(self) -> str:
+        """
+        :return: EnerGenie page address.
+        """
+
         return f"http://{self._ip_address}"
 
     def _check_logged_in(self) -> None:

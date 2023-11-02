@@ -47,7 +47,8 @@ class TestingSystem:
         """
 
         uiob_result = self._device.check_slots()
-        ssh_result = self._ssh_client.check_slots()
+        self._ssh_client.connect()
+        ssh_result = self._ssh_client.check_modules()
         if self._stop_if_fail and (uiob_result or ssh_result):
             raise StopTestException()
 

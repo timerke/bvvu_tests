@@ -1,10 +1,12 @@
 import logging
-from typing import List, Set
+import re
+from typing import Optional, Set
 from paramiko import AutoAddPolicy, SSHClient
 
 
 class SshClient:
 
+    FILE_BEFORE_USBRESET: str = "/home/before_usbreset.txt"
     SLOT_NUMBER: int = 16
 
     def __init__(self, host: str, port: int, username: str, password: str) -> None:
@@ -24,61 +26,101 @@ class SshClient:
         self._username: str = username
 
     @staticmethod
-    def _check_dev(slots: Set[str]) -> bool:
+    def _check_missing(modules: Set[str], required_modules: Set[str], label: str) -> bool:
         """
-        :param slots: set of slots found on the system in the /dev directory.
+        :param modules: set of modules found on the system in the /dev directory;
+        :param required_modules:
+        :param label:
         :return: True if there are missing modules.
         """
 
-        required_slots = set([f"ttyACM{i}" for i in range(SshClient.SLOT_NUMBER)])
-        missing_modules = sorted(required_slots.difference(slots))
+        missing_modules = sorted(required_modules.difference(modules))
         missing_module_number = len(missing_modules)
-        logging.info("[SSH_DEV] Number of missing modules: %d, missing modules: %s", missing_module_number,
+        logging.info("[%s] Number of missing modules: %d, missing modules: %s", label, missing_module_number,
                      missing_modules)
         return len(missing_modules) != 0
 
     @staticmethod
-    def _check_dev_ximc(slots: Set[str]) -> bool:
+    def _get_modules_from_command_output(command_output: str) -> Set[str]:
         """
-        :param slots: set of slots found on the system in the /dev/ximc directory.
-        :return: True if there are missing modules.
-        """
-
-        required_slots = set([f"{i:0>8}" for i in range(1, SshClient.SLOT_NUMBER + 1)])
-        missing_modules = sorted(required_slots.difference(slots))
-        missing_module_number = len(missing_modules)
-        logging.info("[SSH_DEV_XIMC] Number of missing modules: %d, missing modules: %s", missing_module_number,
-                     missing_modules)
-        return len(missing_modules) != 0
-
-    def check_slots(self) -> bool:
-        """
-        :return: True if there are missing modules.
+        :param command_output: string command output.
+        :return: the set of modules found in the command output.
         """
 
-        self._ssh.connect(self._host, self._port, self._username, self._password)
-        slots = set(self.exec_command("ls /dev/ximc"))
-        result_dev_ximc = self._check_dev_ximc(slots)
+        modules = set()
+        for line in command_output.split("\n"):
+            line = line.strip("\n\r")
+            words = [i for i in line.split(" ") if i]
+            for word in words:
+                modules.update([i for i in word.split("\t") if i])
+        return modules
 
-        slots = set(self.exec_command("ls /dev | grep ttyACM"))
-        result_dev = self._check_dev(slots)
+    def _get_modules_from_file(self, text: str) -> Set[str]:
+        """
+        :param text: file content.
+        :return: the set of modules found in the file content.
+        """
+
+        lines = text.split("\n")
+        reboot_number = self._get_reboot_number(lines[0]) if len(lines) > 0 else None
+        if isinstance(reboot_number, int):
+            logging.info("Reboot number from '%s' file = %d", SshClient.FILE_BEFORE_USBRESET, reboot_number)
+        else:
+            logging.warning("Failed to get reboot number from '%s' file", SshClient.FILE_BEFORE_USBRESET)
+
+        if len(lines) > 2 and "modules" in lines[1]:
+            return self._get_modules_from_command_output("\n".join(lines[2:]))
+        logging.warning("'%s' file is not written correctly", SshClient.FILE_BEFORE_USBRESET)
+        return set()
+
+    @staticmethod
+    def _get_reboot_number(line: str) -> Optional[int]:
+        """
+        :param line: string from which to get the reboot number.
+        :return: reboot number.
+        """
+
+        result = re.match(r"^reboot_number=(?P<reboot_number>\d+).*$", line)
+        if result:
+            try:
+                return int(result["reboot_number"])
+            except ValueError:
+                pass
+        return None
+
+    def check_modules(self) -> bool:
+        """
+        :return: True if there are missing modules in /dev or /dev/ximc.
+        """
+
+        command_output = self.exec_command(f"cat {SshClient.FILE_BEFORE_USBRESET}")
+        modules = self._get_modules_from_file(command_output)
+        required_modules = {f"{i:0>8}" for i in range(1, SshClient.SLOT_NUMBER + 1)}
+        self._check_missing(modules, required_modules, "SSH_BEFORE")
+
+        command_output = self.exec_command("ls /dev | grep ttyACM")
+        modules = self._get_modules_from_command_output(command_output)
+        required_modules = {f"ttyACM{i}" for i in range(SshClient.SLOT_NUMBER)}
+        result_dev = self._check_missing(modules, required_modules, "SSH_DEV")
+
+        command_output = self.exec_command("ls /dev/ximc")
+        modules = self._get_modules_from_command_output(command_output)
+        required_modules = {f"{i:0>8}" for i in range(1, SshClient.SLOT_NUMBER + 1)}
+        result_dev_ximc = self._check_missing(modules, required_modules, "SSH_DEV_XIMC")
         return result_dev or result_dev_ximc
 
-    def exec_command(self, command: str, sudo: bool = False) -> List[str]:
+    def connect(self) -> None:
+        self._ssh.connect(self._host, self._port, self._username, self._password)
+
+    def exec_command(self, command: str, sudo: bool = False) -> str:
         """
         :param command: command to be executed over ssh;
         :param sudo:
-        :return: lines from the result of the command.
+        :return: string command output.
         """
 
         stdin, stdout, _ = self._ssh.exec_command(command, get_pty=True)
         if sudo:
             stdin.write(self._password + "\n")
             stdin.flush()
-        stdout_lines = []
-        for line in iter(stdout.readline, ""):
-            line = line.strip("\n\r")
-            lines = [i for i in line.split(" ") if i]
-            for line in lines:
-                stdout_lines.extend([i for i in line.split("\t") if i])
-        return stdout_lines
+        return "".join(iter(stdout.readline, ""))

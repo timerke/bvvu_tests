@@ -10,17 +10,19 @@ import matplotlib.pyplot as plt
 
 class Analyzer:
 
-    PATTERN = re.compile(r"^\[(.*) INFO\] \[(UIOB|SSH_DEV|SSH_DEV_XIMC)\] Number of missing modules: (\d+), "
+    PATTERN = re.compile(r"^\[(.*) INFO\] \[(UIOB|SSH_DEV|SSH_DEV_XIMC|SSH_BEFORE)\] Number of missing modules: (\d+), "
                          r"missing modules: \[(.*)\]$")
     SLOT_NUMBER: int = 16
 
     def __init__(self) -> None:
-        self._ssh_dev_missing_slot_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
-        self._ssh_dev_slot_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
-        self._ssh_dev_ximc_missing_slot_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
-        self._ssh_dev_ximc_slot_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
-        self._uiob_missing_module_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
-        self._uiob_module_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
+        self._ssh_before_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
+        self._ssh_before_history_missing: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
+        self._ssh_dev_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
+        self._ssh_dev_history_missing: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
+        self._ssh_dev_ximc_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
+        self._ssh_dev_ximc_history_missing: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
+        self._uiob_history: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
+        self._uiob_history_missing: List[List[datetime]] = [[] for _ in range(Analyzer.SLOT_NUMBER)]
 
     def _analyze_log(self, log_file: str) -> None:
         """
@@ -39,13 +41,15 @@ class Analyzer:
             if result:
                 log_time = datetime.strptime(result.group(1), "%Y-%m-%d %H:%M:%S")
                 if "[UIOB]" in record:
-                    self._get_modules_from_record(result, log_time, self._uiob_module_history,
-                                                  self._uiob_missing_module_history)
+                    self._get_modules_from_record(result, log_time, self._uiob_history, self._uiob_history_missing)
                 elif "[SSH_DEV]" in record:
                     self._get_slots_from_ssh_record(result, log_time)
                 elif "[SSH_DEV_XIMC]" in record:
-                    self._get_modules_from_record(result, log_time, self._ssh_dev_ximc_slot_history,
-                                                  self._ssh_dev_ximc_missing_slot_history)
+                    self._get_modules_from_record(result, log_time, self._ssh_dev_ximc_history,
+                                                  self._ssh_dev_ximc_history_missing)
+                elif "[SSH_BEFORE]" in record:
+                    self._get_modules_from_record(result, log_time, self._ssh_before_history,
+                                                  self._ssh_before_history_missing)
 
     @staticmethod
     def _draw_data(enabled: List[List[datetime]], disabled: List[List[datetime]], legend_format: str,
@@ -56,7 +60,7 @@ class Analyzer:
         :param slot:
         """
 
-        fig, axs = plt.subplots(2, 1)
+        _, axs = plt.subplots(2, 1)
         total_min_x = None
         total_max_x = None
         for index in range(Analyzer.SLOT_NUMBER):
@@ -117,9 +121,9 @@ class Analyzer:
 
         for slot_index in range(Analyzer.SLOT_NUMBER):
             if slot_index in missing_slots:
-                self._ssh_dev_missing_slot_history[slot_index].append(log_time)
+                self._ssh_dev_history_missing[slot_index].append(log_time)
             else:
-                self._ssh_dev_slot_history[slot_index].append(log_time)
+                self._ssh_dev_history[slot_index].append(log_time)
 
     def run(self, log_file: str) -> None:
         """
@@ -127,15 +131,18 @@ class Analyzer:
         """
 
         self._analyze_log(log_file)
-        self._draw_data(self._uiob_module_history, self._uiob_missing_module_history,
+        self._draw_data(self._uiob_history, self._uiob_history_missing,
                         legend_format="Модуль #{index} ({dump_percentage}% отвалов)",
                         y_labels=["Модули в админке", "Отвалившиеся модули"])
-        self._draw_data(self._ssh_dev_ximc_slot_history, self._ssh_dev_ximc_missing_slot_history,
-                        legend_format="Слот #{index} ({dump_percentage}% отвалов)",
-                        y_labels=["Слоты по ssh (/dev/ximc)", "Отвалившиеся слоты"])
-        self._draw_data(self._ssh_dev_ximc_slot_history, self._ssh_dev_ximc_missing_slot_history,
-                        legend_format="Слот ttyACM{index} ({dump_percentage}% отвалов)",
-                        y_labels=["Слоты по ssh (/dev)", "Отвалившиеся слоты"])
+        self._draw_data(self._ssh_dev_ximc_history, self._ssh_dev_ximc_history_missing,
+                        legend_format="Модуль #{index} ({dump_percentage}% отвалов)",
+                        y_labels=["Модули по ssh (/dev/ximc)", "Отвалившиеся модули"])
+        self._draw_data(self._ssh_dev_ximc_history, self._ssh_dev_ximc_history_missing,
+                        legend_format="Модуль ttyACM{index} ({dump_percentage}% отвалов)",
+                        y_labels=["Модули по ssh (/dev)", "Отвалившиеся модули"])
+        self._draw_data(self._ssh_before_history, self._ssh_before_history_missing,
+                        legend_format="Модуль #{index} ({dump_percentage}% отвалов)",
+                        y_labels=["Модули по ssh до usbreset", "Отвалившиеся модули"])
 
 
 def get_start_date(*args) -> str:

@@ -55,7 +55,7 @@ class SshClient:
                 modules.update([i for i in word.split("\t") if i])
         return modules
 
-    def _get_modules_from_file(self, text: str) -> Set[str]:
+    def _get_modules_from_file(self, text: str) -> Optional[Set[str]]:
         """
         :param text: file content.
         :return: the set of modules found in the file content.
@@ -71,7 +71,7 @@ class SshClient:
         if len(lines) > 2 and "modules" in lines[1]:
             return self._get_modules_from_command_output("\n".join(lines[2:]))
         logging.warning("'%s' file is not written correctly", SshClient.FILE_BEFORE_USBRESET)
-        return set()
+        return None
 
     @staticmethod
     def _get_reboot_number(line: str) -> Optional[int]:
@@ -95,8 +95,9 @@ class SshClient:
 
         command_output = self.exec_command(f"cat {SshClient.FILE_BEFORE_USBRESET}")
         modules = self._get_modules_from_file(command_output)
-        required_modules = {f"{i:0>8}" for i in range(1, SshClient.SLOT_NUMBER + 1)}
-        self._check_missing(modules, required_modules, "SSH_BEFORE")
+        if modules is not None:
+            required_modules = {f"{i:0>8}" for i in range(1, SshClient.SLOT_NUMBER + 1)}
+            self._check_missing(modules, required_modules, "SSH_BEFORE")
 
         command_output = self.exec_command("ls /dev | grep ttyACM")
         modules = self._get_modules_from_command_output(command_output)

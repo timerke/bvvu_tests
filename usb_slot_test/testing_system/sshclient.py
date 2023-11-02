@@ -7,6 +7,7 @@ from paramiko import AutoAddPolicy, SSHClient
 class SshClient:
 
     FILE_BEFORE_USBRESET: str = "/home/before_usbreset.txt"
+    FILE_CUBIELORD_STATUS: str = "/home/cubielord_status.txt"
     SLOT_NUMBER: int = 16
 
     def __init__(self, host: str, port: int, username: str, password: str) -> None:
@@ -88,10 +89,35 @@ class SshClient:
                 pass
         return None
 
+    def _get_status_from_file(self, text: str) -> None:
+        """
+        :param text: file content.
+        """
+
+        lines = text.split("\n")
+        reboot_number = self._get_reboot_number(lines[0]) if len(lines) > 0 else None
+        if isinstance(reboot_number, int):
+            logging.info("Reboot number from '%s' file = %d", SshClient.FILE_CUBIELORD_STATUS, reboot_number)
+        else:
+            logging.warning("Failed to get reboot number from '%s' file", SshClient.FILE_CUBIELORD_STATUS)
+
+        if len(lines) > 2 and "status" in lines[1]:
+            rest_text = "".join(lines[2:])
+            if "cubielord.service" in rest_text:
+                if "Active: inactive (dead)" in rest_text:
+                    logging.info("CUBIELORD is inactive")
+                else:
+                    logging.error("CUBIELORD is active")
+                return
+        logging.warning("'%s' file is not written correctly", SshClient.FILE_CUBIELORD_STATUS)
+
     def check_modules(self) -> bool:
         """
         :return: True if there are missing modules in /dev or /dev/ximc.
         """
+
+        command_output = self.exec_command(f"cat {SshClient.FILE_CUBIELORD_STATUS}")
+        self._get_status_from_file(command_output)
 
         command_output = self.exec_command(f"cat {SshClient.FILE_BEFORE_USBRESET}")
         modules = self._get_modules_from_file(command_output)

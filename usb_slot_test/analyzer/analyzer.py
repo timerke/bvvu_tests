@@ -153,9 +153,11 @@ def get_start_date(*args) -> str:
 
     start_datetime = None
     for data in args:
-        if start_datetime is None or (data and start_datetime > data[0]):
+        if data and (start_datetime is None or start_datetime > data[0]):
             start_datetime = data[0]
-    return start_datetime.strftime("%d.%m.%Y")
+    if start_datetime:
+        return start_datetime.strftime("%d.%m.%Y")
+    return ""
 
 
 def run_analyzer() -> None:
